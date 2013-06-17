@@ -4,6 +4,24 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSoTables extends Migration {
 
+    /*
+     * Users -> hasMany('Posts', 'Badges')
+     * Posts -> belongsTo('Users'), hasMany('Comments', 'PostTags', 'Votes'), hasOne('PostTypes')
+     * Comments -> belongsTo('Posts', 'Votes')
+     * Badges
+     * PostFeedback
+     * PostHistory
+     * PostHistoryTypes
+     * PostTags
+     * PostTypes
+     * SuggestedEdits
+     * SuggestedEditVotes
+     * Tags
+     * TagSynonyms
+     * Votes -> hasOne('VoteTypes')
+     * VoteTypes -> belongsTo('Votes')
+     */
+
 	/**
 	 * Run the migrations.
 	 *
