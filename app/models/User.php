@@ -10,7 +10,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+	protected $table = 'Users';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -47,6 +47,49 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function getReminderEmail()
 	{
 		return $this->email;
+	}
+
+	/**
+	 * Relationships
+	 */
+	public function posts()
+	{
+		return $this->hasMany('Post', 'UserId');
+	}
+
+	public function votes()
+	{
+		return $this->hasMany('Vote', 'UserId');
+	}
+
+	public function provider()
+	{
+		return $this->hasMany('Provider', 'UserId');
+	}
+
+	public function badges()
+	{
+		return $this->hasMany('Badge', 'OwnerUserId');
+	}
+
+	public function comment()
+	{
+		return $this->hasMany('Comment', 'UserId');
+	}
+
+	public function postHistory()
+	{
+		return $this->hasMany('PostHistory', 'UserId');
+	}
+
+	public function suggestedEdit()
+	{
+		return $this->hasMany('SuggestedEdit', 'OwnerUserId');
+	}
+
+	public function suggestedEditVote()
+	{
+		return $this->hasMany('suggestedEditVote', 'UserId');
 	}
 
 }
