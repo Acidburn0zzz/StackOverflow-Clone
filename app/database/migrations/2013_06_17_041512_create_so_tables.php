@@ -20,6 +20,7 @@ class CreateSoTables extends Migration {
      * TagSynonyms
      * Votes -> hasOne('VoteTypes')
      * VoteTypes -> belongsTo('Votes')
+     * Providers (Social accounts)
      */
 
 	/**
@@ -51,6 +52,7 @@ class CreateSoTables extends Migration {
             $table->integer('FavoriteCount');
             $table->datetime('ClosedDate');
             $table->datetime('CommunityOwnedDate');
+            $table->timestamps();
         });    
         
         Schema::create('Users', function($table) {
@@ -67,6 +69,7 @@ class CreateSoTables extends Migration {
             $table->integer('DownVotes');
             $table->string('EmailHash', 64);
             $table->integer('Age');
+            $table->timestamps();
         });
         
         Schema::create('Comments', function($table) {
@@ -77,6 +80,7 @@ class CreateSoTables extends Migration {
             $table->datetime('CreationDate');
             $table->string('UserDisplayName', 30);
             $table->integer('UserId');
+            $table->timestamps();
         });
         
         Schema::create('Badges', function($table) {
@@ -84,6 +88,7 @@ class CreateSoTables extends Migration {
             $table->integer('UserId');
             $table->string('Name', 50);
             $table->datetime('Date');
+            $table->timestamps();
         });
         
         Schema::create('PostFeedback', function($table) {
@@ -92,6 +97,7 @@ class CreateSoTables extends Migration {
             $table->boolean('IsAnonymous');
             $table->integer('VoteTypeId');
             $table->datetime('CreationDate');
+            $table->timestamps();
         });
         
         Schema::create('PostHistory', function($table) {
@@ -104,21 +110,25 @@ class CreateSoTables extends Migration {
             $table->string('UserDisplayName', 40);
             $table->text('Comment');
             $table->text('Text');
+            $table->timestamps();
         });
             
         Schema::create('PostHistoryTypes', function($table) {
             $table->increments('Id');
             $table->string('Name', 50);
+            $table->timestamps();
         });
             
         Schema::create('PostTags', function($table) {
             $table->integer('PostId');  
             $table->integer('TagId');
+            $table->timestamps();
         });
             
         Schema::create('PostTypes', function($table) {        
             $table->increments('Id');
             $table->string('Name', 50);
+            $table->timestamps();
         });
 
         Schema::create('SuggestedEdits', function($table) {
@@ -133,6 +143,7 @@ class CreateSoTables extends Migration {
             $table->string('Title', 250);
             $table->string('Tags', 150);
             $table->integer('RevisionGUID'); // uniqueidentifier
+            $table->timestamps();
         });
 
         Schema::create('SuggestedEditVotes', function($table) {
@@ -143,6 +154,7 @@ class CreateSoTables extends Migration {
             $table->datetime('CreationDate');
             $table->integer('TargetUserId');
             $table->integer('TargetRepChange');
+            $table->timestamps();
         });
 
         Schema::create('Tags', function($table) {
@@ -151,6 +163,7 @@ class CreateSoTables extends Migration {
             $table->integer('Count');
             $table->integer('ExcerptPostId');
             $table->integer('WikiPostId');
+            $table->timestamps();
         });
 
         Schema::create('TagSynonyms', function($table) {
@@ -164,6 +177,7 @@ class CreateSoTables extends Migration {
             $table->integer('Score');
             $table->integer('ApprovedByUserId');
             $table->datetime('ApprovalDate');
+            $table->timestamps();
         });
 
         Schema::create('Votes', function($table) {
@@ -173,11 +187,21 @@ class CreateSoTables extends Migration {
             $table->integer('UserId');
             $table->datetime('CreationDate');
             $table->integer('BountyAmount');
+            $table->timestamps();
         });
 
         Schema::create('VoteTypes', function($table) {
             $table->increments('Id');
             $table->string('Name', 50);
+            $table->timestamps();
+        });
+
+        Schema::create('Providers', function($table) {
+            $table->increments('Id');
+            $table->integer('UserId');
+            $table->string('ProviderName');
+            $table->integer('ProviderUid');
+            $table->timestamps();
         });
 	}
 
@@ -203,6 +227,7 @@ class CreateSoTables extends Migration {
         Schema::drop('TagSynonyms');
         Schema::drop('Votes');
         Schema::drop('VoteTypes');
+        Schema::drop('Providers');
 	}
 
 }
