@@ -2,7 +2,7 @@
 
 class Comment extends Eloquent {
 
-    protected $table = 'Comments';
+    protected $table = 'comments';
 
     protected $guarded = array();
 
@@ -11,6 +11,12 @@ class Comment extends Eloquent {
     /**
      * Relationships
      */
+    
+    public function user()
+    {
+        return $this->belongsTo('User');
+    }
+
     public function post()
     {
         return $this->belongsTo('Post');

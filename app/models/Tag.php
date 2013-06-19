@@ -2,7 +2,7 @@
 
 class Tag extends Eloquent {
 
-    protected $table = 'Tags';
+    protected $table = 'tags';
 
     protected $guarded = array();
 

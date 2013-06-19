@@ -2,7 +2,7 @@
 
 class Provider extends Eloquent {
 
-    protected $table = 'Providers';
+    protected $table = 'providers';
 
     protected $guarded = array();
 

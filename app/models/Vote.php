@@ -2,7 +2,7 @@
 
 class Vote extends Eloquent {
 
-    protected $table = 'Votes';
+    protected $table = 'votes';
 
     protected $guarded = array();
 
@@ -14,12 +14,12 @@ class Vote extends Eloquent {
     
     public function post()
     {
-        return $this->belongsTo('Post', 'PostId');
+        return $this->belongsTo('Post');
     }
 
     public function user()
     {
-        return $this->belongsTo('User', 'UserId');
+        return $this->belongsTo('User');
     }
     
     public function voteType()

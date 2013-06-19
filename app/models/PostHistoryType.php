@@ -2,7 +2,7 @@
 
 class PostHistoryType extends Eloquent {
 
-    protected $table = 'PostHistoryTypes';
+    protected $table = 'post_history_type';
 
     protected $guarded = array();
 
@@ -13,6 +13,6 @@ class PostHistoryType extends Eloquent {
      */
     public function postHistory()
     {
-        return $this->belongsTo('PostHistory');
+        return $this->belongsTo('post_history');
     }
 }

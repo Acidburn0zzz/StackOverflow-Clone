@@ -2,7 +2,7 @@
 
 class PostTag extends Eloquent {
 
-    protected $table = 'PostTags';
+    protected $table = 'post_tags';
 
     protected $guarded = array();
 
@@ -13,11 +13,11 @@ class PostTag extends Eloquent {
      */
     public function post()
     {
-        return $this->belongsTo('Post', 'PostId');
+        return $this->belongsTo('Post');
     }
     
     public function tag()
     {
-        return $this->hasOne('Tag', 'TagId');
+        return $this->hasOne('Tag', 'tag_id');
     }
 }

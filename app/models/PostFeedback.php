@@ -2,7 +2,7 @@
 
 class PostFeedback extends Eloquent {
 
-    protected $table = 'PostFeedback';
+    protected $table = 'post_feedback';
 
     protected $guarded = array();
 
@@ -18,6 +18,6 @@ class PostFeedback extends Eloquent {
 
     public function voteType()
     {
-        return $this->hasOne('PostType', 'PostTypeId');
+        return $this->hasOne('PostType', 'post_type_id');
     }
 }

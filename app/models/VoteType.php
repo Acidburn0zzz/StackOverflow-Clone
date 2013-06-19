@@ -2,7 +2,7 @@
 
 class VoteType extends Eloquent {
 
-    protected $table = 'VoteTypes';
+    protected $table = 'vote_types';
 
     protected $guarded = array();
 

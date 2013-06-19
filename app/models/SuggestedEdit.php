@@ -2,7 +2,7 @@
 
 class SuggestedEdit extends Eloquent {
 
-    protected $table = 'SuggestedEdits';
+    protected $table = 'suggested_edits';
 
     protected $guarded = array();
 
@@ -23,6 +23,6 @@ class SuggestedEdit extends Eloquent {
 
     public function suggestedEditVotes()
     {
-        return $this->hasMany('SuggestedEditVote', 'SuggestedEditId');
+        return $this->hasMany('SuggestedEditVote', 'suggested_edit_id');
     }
 }

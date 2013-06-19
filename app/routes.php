@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+    return User::with(array('posts.comments.user'))->find(1);
 });
 
 Route::get('test', function()
