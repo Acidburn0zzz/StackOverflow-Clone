@@ -2,7 +2,27 @@
 	"folders":
 	[
 		{
-			"path": "/E/so-clone"
+			"path": "/E/so-clone",
+            "folder_exclude_patterns": [
+                "vendor",
+                "bootstrap",
+                "app/commands",
+                "app/lang",
+                "app/storage",
+                "app/tests",
+                "app/config/testing",
+                "public/build",
+                "public/packages"
+            ],
+            "file_exclude_patterns": [
+                ".gitattributes",
+                "artisan",
+                "composer.lock",
+                "CONTRIBUTING.md",
+                "phpunit.xml",
+                "readme.md",
+                "server.php"
+            ]
 		}
 	]
 }
