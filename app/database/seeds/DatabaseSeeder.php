@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('UsersTableSeeder');
 		$this->call('PostsTableSeeder');
 		$this->call('PostTypesTableSeeder');
-		$this->call('CommentsTableSeeder');
+        $this->call('CommentsTableSeeder');
+		$this->call('TagsTableSeeder');
 	}
 
 }

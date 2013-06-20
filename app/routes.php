@@ -11,9 +11,22 @@
 |
 */
 
+Route::resource('/', 'HomeController');
+
+Route::resource('question', 'QuestionController');
+Route::resource('questions', 'QuestionsController');
+Route::resource('tag', 'TagController');
+Route::resource('tags', 'TagsController');
+Route::resource('user', 'UserController');
+
 Route::get('/', function()
 {
-    return User::with(array('posts.comments.user'))->find(1);
+    $data = array(
+        'questions' => Post::all(),
+        'tags'      => Tag::all()
+    );
+
+    return View::make('public.questions.index', $data);
 });
 
 Route::get('test', function()

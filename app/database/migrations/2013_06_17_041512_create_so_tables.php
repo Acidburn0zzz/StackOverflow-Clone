@@ -160,7 +160,7 @@ class CreateSoTables extends Migration {
 
         Schema::create('tags', function($table) {
             $table->increments('id');
-            $table->string('tag_name', 25);
+            $table->string('name', 25);
             $table->integer('count');
             $table->integer('excerpt_post_id');
             $table->integer('wiki_post_id');
