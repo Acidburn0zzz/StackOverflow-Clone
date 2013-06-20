@@ -16,11 +16,28 @@
     
     <div class="container">
         
-        @include('public.partials.header')
+        <div class="row">
+            <div class="col col-lg-12">
+                @include('public.partials.header')                
+            </div>
+        </div>
 
-        @yield('content')        
+        <div class="row">
+            <div class="col col-lg-9">
+                @yield('content')                
+            </div>
+            <div class="col col-lg-3">
+                @yield('side-menu')
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-lg-12">
+                @include('public.partials.footer')
+            </div>
+        </div>
+
     </div>
-
-    @include('public.partials.footer')
+    
 </body>
 </html>

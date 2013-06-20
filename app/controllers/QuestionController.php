@@ -9,7 +9,9 @@ class QuestionController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$data = array(
+            'question' => Question::where('id', '=', $id)->first()
+        );
 	}
 
 	/**
@@ -40,7 +42,12 @@ class QuestionController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$data = array(
+            'post' => Post::where('id', '=', $id)->first(),
+            'tags' => Tag::all()
+        );
+
+        return View::make('public.question.index', $data);
 	}
 
 	/**
