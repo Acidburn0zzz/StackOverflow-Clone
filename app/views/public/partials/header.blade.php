@@ -1,11 +1,11 @@
 <!-- Top Header -->
 <div class="row">
     <div class="col col-lg-4">
-        <a><img src="http://placehold.it/350x75&text=SO+Clone+logo" class="img-rounded"></a>
+        <a><img src="http://placehold.it/350x75/4cae4c/000000&text=Logo" class="img-rounded"></a>
     </div>
     <div class="col col-lg-8">
         <div class="nav">
-            <div class="btn-toolbar">
+            <div class="btn-toolbar header-toolbar">
                 <div class="btn-group">
                     <a href="/questions" class="btn btn-primary">Questions</a>
                     <a href="/tags" class="btn btn-primary">Tags</a>

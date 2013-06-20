@@ -2,3 +2,5 @@ body { padding-top: 70px; }
 
 span.badge > a { color: #ffffff; }
 span.badge > a:hover { color: #111111; }
+
+.header-toolbar { padding-top: 37px; }
