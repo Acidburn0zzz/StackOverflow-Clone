@@ -4,3 +4,5 @@
 composer.phar
 composer.lock
 .DS_Store
+.so-clone.sublime-project
+.so-clone.sublime-workspace

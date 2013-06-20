@@ -9,8 +9,29 @@ class QuestionsController extends \BaseController {
 	 */
 	public function index()
 	{
+        $sort = array('name' => '', 'direction' => '');
+
+        switch(Input::get('sort'))
+        {
+            case 'newest':
+                $sort['name'] = 'created_at';
+                $sort['direction'] = 'desc';
+                break;
+            case 'oldest':
+                $sort['name'] = 'created_at';
+                $sort['direction'] = 'asc';
+            case 'most viewed':
+                $sort['name'] = 'view_count';
+                $sort['direction'] = 'desc';
+                break;
+            default:
+                $sort['name'] = 'created_at';
+                $sort['direction'] = 'desc';
+                break;
+        }
+
 		$data = array(
-            'questions' => Post::all(),
+            'questions' => Post::orderBy($sort['name'], $sort['direction'])->get(),
             'tags'      => Tag::all()
         );
 
