@@ -9,6 +9,7 @@ class UsersTableSeeder extends Seeder {
 
         $users = array(
             array(
+                'id'               => 1,
                 'reputation'       => '50',
                 'creation_date'    => date('Y-m-d H:i:s'),
                 'display_name'     => 'John Doe',
@@ -25,6 +26,7 @@ class UsersTableSeeder extends Seeder {
                 'created_at'       => date('Y-m-d H:i:s')
             ),
             array(
+                'id'               => 2,
                 'reputation'       => '35',
                 'creation_date'    => date('Y-m-d H:i:s'),
                 'display_name'     => 'Jane Doe',

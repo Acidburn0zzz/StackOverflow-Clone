@@ -42,10 +42,18 @@ class QuestionController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$data = array(
-            'post' => Post::where('id', '=', $id)->first(),
-            'tags' => Tag::all()
+        $post    = Post::where('id', '=', $id)->first();
+        $answer  = Post::where('id', '=', $post->accepted_answer_id)->first();
+        $answers = Post::where('parent_id', '=', $post->id)->where('id', "<>", $post->accepted_answer_id)->get();
+        $tags    = Tag::all();
+        
+        $data = array(
+            'post'    => $post,
+            'answer'  => $answer,
+            'answers' => $answers,
+            'tags'    => $tags
         );
+
 
         return View::make('public.question.index', $data);
 	}

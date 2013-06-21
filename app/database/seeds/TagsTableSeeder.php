@@ -9,6 +9,7 @@ class TagsTableSeeder extends Seeder {
 
         $tags = array(
             array(
+                'id'              => 1,
                 'name'            => 'Tag 1',
                 'count'           => '1',
                 'excerpt_post_id' => '',
@@ -17,6 +18,7 @@ class TagsTableSeeder extends Seeder {
                 'created_at'      => date('Y-m-d H:i:s'),
             ),
             array(
+                'id'              => 2,
                 'name'            => 'Tag 2',
                 'count'           => '1',
                 'excerpt_post_id' => '',

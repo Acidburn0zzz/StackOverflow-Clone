@@ -9,6 +9,7 @@ class CommentsTableSeeder extends Seeder {
 
         $comments = array(
             array(
+                'id'                => 1,
                 'post_id'           => '1',
                 'score'             => '2',
                 'body'              => 'Using a for or foreach loop.',
@@ -19,9 +20,10 @@ class CommentsTableSeeder extends Seeder {
                 'updated_at'        => date('Y-m-d H:i:s')
             ),
             array(
+                'id'                => 2,
                 'post_id'           => '2',
                 'score'             => '4',
-                'body'              => 'Like so; foreach($array as $element){}.',
+                'body'              => 'Not too sure.',
                 'creation_date'     => date('Y-m-d H:i:s'),
                 'user_display_name' => 'JohnDoe01',
                 'user_id'           => '1',

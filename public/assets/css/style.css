@@ -1,5 +1,53 @@
 body { padding-top: 70px; }
 
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px dashed #CCC;
+    border-bottom: 1px dashed #FFF;
+    border-bottom: 1px dashed rgba(255, 255, 255, .5);
+}
+
+.comment-body {
+    color: #666;
+}
+.comment-up-vote {
+    margin-bottom: 0;
+}
+.comment-flag-icon {
+    padding-left: 16px;
+}
+
+.hr-comment { margin: 5px 0; }
+.hr-comment-final { margin: 0; }
+
+.vote-cell {
+    width: 8%;
+    display: inline-block;
+    float: left;
+    margin-right: 4%;
+}
+
+.body-cell {
+    float: left;
+    display: inline-block;
+    width: 88%;
+}
+
+.comment-vote-cell {
+    opacity:0.4;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+    display: block;
+}
+
+.comment-vote-cell:hover {
+    opacity:1;
+    filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.vote-arrow:hover { color: red; }
+.accept-tick { color: green; }
+
 span.badge > a { color: #ffffff; }
 span.badge > a:hover { color: #111111; }
 
