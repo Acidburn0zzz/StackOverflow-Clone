@@ -30,10 +30,15 @@ class QuestionsController extends \BaseController {
                 break;
         }
 
+        $posts = Post::orderBy($sort['name'], $sort['direction'])->where('post_type_id', '=', '1')->paginate(1);
+        $tags = Tag::paginate(1);
+
 		$data = array(
-            'questions' => Post::orderBy($sort['name'], $sort['direction'])->get(),
-            'tags'      => Tag::all()
+            'questions' => $posts,
+            'tags'      => $tags
         );
+
+        // return var_dump($posts);
 
         return View::make('public.questions.index', $data);
 	}

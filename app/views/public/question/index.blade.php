@@ -12,6 +12,6 @@
 
 @section('side-menu')
 
-    @include('public.side-menus.questions')
+    @include('public.side-menus.question')
 
 @stop

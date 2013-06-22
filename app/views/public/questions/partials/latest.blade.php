@@ -2,6 +2,7 @@
 <div class="row">
     <div class="col col-lg-12">
         <h2>Latest Questions</h2>
+        <?php echo $questions->appends(Input::all())->links(); ?>
         <table class="table table-hover">
         @foreach($questions as $q)
             <tr>
@@ -21,14 +22,11 @@
                     <p>
                         <a href="/question/{{ $q->id }}" >{{ $q->title }}</a>
                     </p>
-                    <p>
-                        <span class="badge"><a href="#">Tag</a></span>&nbsp;<span class="badge"><a href="#">Tags</a></span>
-                        <span class="pull-right">&nbsp;&nbsp;{{ $q->user->reputation }}</span>
-                        <span class="pull-right"><a href="/user/{{ $q->user_id }}">{{ $q->user->display_name }}</a></span>
-                    </p>
+                    
                 </td>
             </tr>
         @endforeach
         </table>
     </div>
+
 </div>

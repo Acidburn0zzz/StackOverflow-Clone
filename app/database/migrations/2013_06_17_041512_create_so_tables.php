@@ -40,7 +40,6 @@ class CreateSoTables extends Migration {
             $table->integer('view_count');
             $table->text('body');
             $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('owner_display_name', 40);
             $table->integer('last_editor_user_id');
             $table->string('last_editor_display_name', 40);

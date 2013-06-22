@@ -2,7 +2,7 @@
 
 class Post extends Eloquent {
 
-    protected $table = 'Posts';
+    protected $table = 'posts';
 
     protected $guarded = array();
 

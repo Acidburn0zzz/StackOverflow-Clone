@@ -9,5 +9,6 @@
             </a>
         </p>
         @endforeach
+        {{ $tags->links() }}
     </div>
 </div>
