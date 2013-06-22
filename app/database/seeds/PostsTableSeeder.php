@@ -11,7 +11,7 @@ class PostsTableSeeder extends Seeder {
             array(
                 'id'                       => 1,
                 'post_type_id'             => '1',
-                'accepted_answer_id'       => '1',
+                'accepted_answer_id'       => '',
                 'parent_id'                => '',
                 'creation_date'            => date('Y-m-d H:i:s'),
                 'score'                    => '2',
