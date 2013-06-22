@@ -30,7 +30,7 @@ class QuestionsController extends \BaseController {
                 break;
         }
 
-        $posts = Post::orderBy($sort['name'], $sort['direction'])->where('post_type_id', '=', '1')->paginate(2);
+        $posts = Post::orderBy($sort['name'], $sort['direction'])->where('post_type_id', '=', '1')->paginate(15);
         $tags = Tag::all();
 
 		$data = array(
