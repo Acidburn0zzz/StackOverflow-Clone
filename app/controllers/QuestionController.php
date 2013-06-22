@@ -44,7 +44,7 @@ class QuestionController extends \BaseController {
 	{
         $post    = Post::where('id', '=', $id)->first();
         $answer  = Post::where('id', '=', $post->accepted_answer_id)->first();
-        $answers = Post::where('parent_id', '=', $post->id)->where('id', "<>", $post->accepted_answer_id)->get();
+        $answers = Post::with(array('votes'))->where('parent_id', '=', $post->id)->where('id', "<>", $post->accepted_answer_id)->get();
         $tags    = Tag::all();
         
         $data = array(

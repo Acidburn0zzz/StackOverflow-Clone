@@ -114,6 +114,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
+		'JasonNZ\Jinput\JinputServiceProvider'
 
 	),
 
@@ -179,7 +180,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-        'Carbon' => 'Carbon\Carbon'
+        'Carbon' 		  => 'Carbon\Carbon',
+        'Jinput'		  => 'JasonNZ\Jinput\Jinput'	
 
 	),
 

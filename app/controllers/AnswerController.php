@@ -29,9 +29,17 @@ class AnswerController extends \BaseController {
 	 */
 	public function store()
 	{
-		$input = Input::all();
+		$input = Jinput::all();
 
-		return dd($input);
+		$validation = new SOC\Validate\Answer($input);
+
+		if($validation->passes()) {
+			$answer = new SOC\Create\Answer($input);
+			$answer->add();
+			return 'Answer created!';
+		} else {
+			return dd($validation->getErrors());
+		}
 	}
 
 	/**

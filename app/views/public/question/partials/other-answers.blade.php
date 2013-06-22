@@ -10,7 +10,7 @@
                 <i class="icon icon-chevron-up icon-2x vote-arrow"></i>
             </p>
             <p class="text-center">
-                {{ $answer->votes->count() }}
+                {{ $a->votes->count() }}
             </p>
             <p class="text-center">
                 <i class="icon icon-chevron-down icon-2x vote-arrow"></i>
