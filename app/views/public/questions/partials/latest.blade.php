@@ -27,6 +27,7 @@
             </tr>
         @endforeach
         </table>
+        {{ $questions->append(Input::all()->links() }}
     </div>
 
 </div>

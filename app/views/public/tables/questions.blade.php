@@ -30,5 +30,7 @@
             </tr>
         @endforeach
         </table>
+
+        {{ $questions->appends('sort', Input::get('sort'))->links() }}
     </div>
 </div>
