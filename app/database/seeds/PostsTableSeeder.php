@@ -25,7 +25,7 @@ class PostsTableSeeder extends Seeder {
                 'last_activity_date'       => date('Y-m-d H:i:s'),
                 'title'                    => 'PHP array looping?',
                 'tags'                     => 'php, php-5',
-                'answer_count'             => '1',
+                'answer_count'             => '0',
                 'comment_count'            => '1',
                 'favorite_count'           => '1',
                 'closed_date'              => date('Y-m-d H:i:s'),

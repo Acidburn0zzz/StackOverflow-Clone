@@ -8,6 +8,9 @@
     <!-- Answers -->
     @include('public.question.partials.answers')
 
+    <!-- Answer -->
+    @include('public.forms.answer')
+
 @stop
 
 @section('side-menu')

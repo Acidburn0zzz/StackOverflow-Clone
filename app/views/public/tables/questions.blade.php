@@ -1,7 +1,7 @@
 <!-- Questions Table -->
 <div class="row">
     <div class="col col-lg-12">
-        <h2>Latest Questions</h2>
+        <h2>{{ ucfirst(Input::get('sort', 'latest')) }} Questions</h2>
         <table class="table table-hover">
         @foreach($questions as $q)
             <tr>
